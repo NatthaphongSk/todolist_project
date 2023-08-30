@@ -6,7 +6,7 @@ function Header(){
     return(
         <header className="header">
           <div className="header__logo">
-            <GoTasklist />
+            <GoTasklist/>
           </div>
           <div className="header__text">
             <h1>My-Todolist</h1>

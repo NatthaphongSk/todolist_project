@@ -8,7 +8,7 @@
         left: 7px;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 1.4rem;
+        font-size: 2rem;
         color: $grey-dark;
         display: flex; // make children to be inline
     }
@@ -17,6 +17,6 @@
         padding-left: 30px;
         border-radius: 5px;
         border: 1px solid $grey-light;
-
+        font-size: 2rem;
     }
 }
