@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import Header from "../components/Header";
 import Lists from "../components/Lists";
+import TodoHeader from "./Todo/TodoHeader";
 
 function App() {
   const generalList = [
@@ -46,7 +47,16 @@ function App() {
           </section>
         </aside>
       </div>
-      <div className="todo__content">TodoContent</div>
+      <div className="todo__content">
+        <main className="todo__container">
+          {/* header */}
+          <TodoHeader />
+
+          {/* CreateTodo */}
+
+          {/* TodoLists */}
+        </main>
+      </div>
     </div>
   );
 }
