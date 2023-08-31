@@ -36,7 +36,7 @@ function TodoCreate() {
   return (
     <>
       {isOpenForm ? 
-        <Todoform textSubmit="Add Task"/>:
+        <Todoform textSubmit="Add Task" setIsOpenForm={setIsOpenForm}/>:
         (<div className={styles.todo__create} onClick={handleClick}>
         <div className={styles.todo__create__button}>
           <HiPlus />
