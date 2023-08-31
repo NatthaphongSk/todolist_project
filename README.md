@@ -62,16 +62,15 @@ body {
 - ไฟล์ index.scss : ให้ทำการ import google font
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@400;600;700&display=swap');
 ```
 
 - ไฟล์ index.scss : ทำการเพิ่ม font หลักของ application (Nunito) ลงใน tag body
 
 ```css
 body {
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -142,7 +141,7 @@ $sidebar-width: 300px;
 - ไฟล์ App.jsx : implement styles ลงไฟล์ App.jsx
 
 ```jsx
-import styles from "App.module.scss";
+import styles from 'App.module.scss';
 
 <div className={styles.todo}>
   <div className={styles.todo__header}>Header</div>
@@ -158,17 +157,17 @@ import styles from "App.module.scss";
 - สร้างไฟล์ Header.jsx สำหรับทำ Header
 
 ```jsx
-<header className="header">
+<header className='header'>
   {/* Logo */}
-  <div className="header__logo"></div>
+  <div className='header__logo'></div>
 
   {/* Text */}
-  <div className="header__text">
+  <div className='header__text'>
     <h3>Todoist</h3>
   </div>
 
   {/* Search */}
-  <div className="header__search"></div>
+  <div className='header__search'></div>
 </header>
 ```
 
@@ -203,7 +202,7 @@ import styles from "App.module.scss";
 - implement styles กับ className
 
 ```jsx
-import styles from "./Header.module.scss";
+import styles from './Header.module.scss';
 
 // implement styles กับ className
 ```
@@ -213,12 +212,12 @@ import styles from "./Header.module.scss";
 - แทรก Logo Home ลงใน container
 
 ```jsx
-import { FaHome } from "react-icons/fa";
+import { FaHome } from 'react-icons/fa';
 ```
 
 ```jsx
 // add this code in return statement
-<div className="header__logo">
+<div className='header__logo'>
   <FaHome />
 </div>
 ```
@@ -229,12 +228,12 @@ import { FaHome } from "react-icons/fa";
 - สร้างไฟล์ Search.module.scss
 
 ```jsx
-import { FaSearch } from "react-icons/fa";
-<div className="search">
-  <span className="search__icon">
+import { FaSearch } from 'react-icons/fa';
+<div className='search'>
+  <span className='search__icon'>
     <FaSearch />
   </span>
-  <input type="text" className="search__input" placeholder="search" />
+  <input type='text' className='search__input' placeholder='search' />
 </div>;
 ```
 
@@ -281,9 +280,9 @@ import { FaSearch } from "react-icons/fa";
 - สร้างไฟล์ Sidebar.jsx
 
 ```jsx
-<aside className="sidebar">
-  <section className="sidebar_category">{/* for generic list*/}</section>
-  <section className="sidebar_category">{/* for project list*/}</section>
+<aside className='sidebar'>
+  <section className='sidebar_category'>{/* for generic list*/}</section>
+  <section className='sidebar_category'>{/* for project list*/}</section>
 </aside>
 ```
 
@@ -304,24 +303,24 @@ import { FaSearch } from "react-icons/fa";
 - children แรก ของ .sidebar_category
 
 ```jsx
-<ul className="list">
-  <li className="list__item">
-    <span className="list__icon">
+<ul className='list'>
+  <li className='list__item'>
+    <span className='list__icon'>
       <FaInbox />
     </span>
-    <h6 className="list__text">Inbox</h6>
+    <h6 className='list__text'>Inbox</h6>
   </li>
-  <li className="list__item">
-    <span className="list__title">
+  <li className='list__item'>
+    <span className='list__title'>
       <FaCalendar />
     </span>
-    <h6 className="list__title">Today</h6>
+    <h6 className='list__title'>Today</h6>
   </li>
-  <li className="list__item">
-    <span className="list__icon">
+  <li className='list__item'>
+    <span className='list__icon'>
       <FaCalendarAlt />
     </span>
-    <h6 className="list__title">Next 7 Days</h6>
+    <h6 className='list__title'>Next 7 Days</h6>
   </li>
 </ul>
 ```
@@ -404,26 +403,26 @@ li {
 - children ที่สอง ของ .sidebar_category
 
 ```jsx
-<div className="accordion">
-  <div className="accordion__header">
-    <span className="accordion__header__icon">
+<div className='accordion'>
+  <div className='accordion__header'>
+    <span className='accordion__header__icon'>
       <FaChevronDown />
     </span>
-    <h6 className="accordion__header__title">Projects</h6>
+    <h6 className='accordion__header__title'>Projects</h6>
   </div>
-  <div className="accordion__content">
-    <ul className="list">
-      <li className="list__item">
-        <span className="list__icon">
+  <div className='accordion__content'>
+    <ul className='list'>
+      <li className='list__item'>
+        <span className='list__icon'>
           <FaInbox />
         </span>
-        <h6 className="list__title">Project-A</h6>
+        <h6 className='list__title'>Project-A</h6>
       </li>
-      <li className="list__item">
-        <span className="list__icon">
+      <li className='list__item'>
+        <span className='list__icon'>
           <FaInbox />
         </span>
-        <h6 className="list__title">Project-B</h6>
+        <h6 className='list__title'>Project-B</h6>
       </li>
     </ul>
   </div>
@@ -488,14 +487,12 @@ li {
 ```js
 export function TodoHeader() {
   let today = new Date();
-  let options = { weekday: "short", day: "numeric", month: "short" };
+  let options = { weekday: 'short', day: 'numeric', month: 'short' };
 
   return (
     <div className={styles.header}>
       <h1 className={styles.header__text}>Inbox</h1>
-      <span className={styles.header__date}>
-        {today.toLocaleDateString("en-US", options)}
-      </span>
+      <span className={styles.header__date}>{today.toLocaleDateString('en-US', options)}</span>
     </div>
   );
 }
@@ -513,6 +510,397 @@ export function TodoHeader() {
   &__date {
     font-size: 1.2rem;
     color: $grey-dark;
+  }
+}
+```
+
+# 8 : CreateTodo
+
+```js
+<div className='create__todo'>
+  <span className='create__todo__icon'>+</span>
+  <h3 className='create__todo__text'>Add task</h3>
+</div>
+```
+
+```scss
+.create__todo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+
+  &__icon {
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+    text-align: center;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+
+    &:hover {
+      background-color: $primary;
+      color: white;
+    }
+  }
+
+  &__text {
+    color: grey;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.2rem;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+```
+
+# 9 : TodoForm
+
+```js
+<form className='todo__form__container'>
+  <input className='todo__form__input' placeholder='Task Name' />
+  <div className='todo__form__footer'>
+    <p className='todo__error'>Title is required</p>
+    <div className='todo__form__buttons'>
+      <button>Cancel</button>
+      <button>Add Task</button>
+    </div>
+  </div>
+</form>
+```
+
+```scss
+.todo__form__container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  gap: 10px;
+  border: 1px solid $grey-light;
+}
+
+.todo__form__input {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 10px;
+  width: 100%;
+  font-size: 1.4rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.todo__form__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo__error {
+  justify-self: start;
+  padding: 10px;
+  font-size: 10px;
+  font-weight: 800;
+  color: $primary;
+}
+.todo__form__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex: 1;
+
+  & > button {
+    border: none;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  & > button:last-child {
+    background-color: $primary;
+    color: $white;
+  }
+}
+```
+
+# 10 : Condition Render CreateTodo with TodoForm
+
+# WARNING : AFTER THIS STEP, PLS STICK WITH INSTRUCTOR
+
+# 11 : TodoItem
+
+```js
+<li className='todo'>
+  <div className='todo__checkbox'>
+    <HiCheck className='todo__checkbox__icon' />
+  </div>
+  <p className='todo__task done'>item-1</p>
+
+  <div className='todo_edit'>
+    <HiPencil className='todo_edit__icon' />
+  </div>
+
+  <div className='todo_delete'>
+    <HiTrash className='todo_delete__icon' />
+  </div>
+</li>
+```
+
+```scss
+.todo {
+  cursor: pointer;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $grey-light;
+  }
+
+  &__checkbox {
+    color: $grey-dark;
+    height: 16px;
+    width: 16px;
+    display: block;
+    border: 1px solid $grey-dark;
+    border-radius: 16px;
+    text-align: center;
+    line-height: 16px;
+
+    &__icon {
+      display: none;
+      font-size: 1.2rem;
+    }
+
+    &__icon__done {
+      display: inline;
+      font-size: 12px;
+    }
+  }
+
+  &__task {
+    flex: 1;
+  }
+
+  &__edit,
+  &__delete {
+    color: gray;
+    display: flex;
+    align-items: center;
+    font-size: 1.9rem;
+
+    &:hover {
+      color: $grey-dark;
+    }
+  }
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+// effect ติ้กถูกตอน hover ที่ <li>
+// .checkbox__container:hover {
+//     .checkbox__icon {
+//         display: inline;
+//     }
+// }
+```
+
+# 12 : เอา TodoForm ไป toggle กับ TodoCreate
+
+<!--
+# 13 Refractor เป็น JSX Component, SCSS Module
+
+```js
+// TodoContent.jsx
+import { TodoHeader } from './TodoHeader';
+import { TodoCreate } from './TodoCreate';
+import { TodoLists } from './TodoLists';
+
+export function TodoContent() {
+    return (
+        <main className='content'>
+            <TodoHeader />
+            <TodoCreate />
+            <TodoLists />
+        </main>
+    );
+}
+```
+
+```js
+// AddTodo.jsx
+import { useState } from 'react';
+import styles from './AddTodo.module.scss';
+import { TodoForm } from './TodoForm';
+export function AddTodo() {
+    const [addMode, setAddMode] = useState(false);
+    const [newTodo, setNewTodo] = useState('');
+
+    const handleClickAdd = () => setAddMode(true);
+    const handleClickCancel = () => {
+        // setNewTodo('')
+        setAddMode(false);
+    };
+    const handleClickAddTodo = (e) => {
+        e.preventDefault();
+        setAddMode(false);
+    };
+
+    const handleChangeTodo = (e) => {
+        setNewTodo(e.target.value);
+    };
+
+    return (
+        <div className={styles.container}>
+            {!addMode ? (
+                <div className={styles.add__todo} onClick={handleClickAdd}>
+                    <span>+</span>
+                    <h3>Add task</h3>
+                </div>
+            ) : (
+                <TodoForm
+                    task={newTodo}
+                    textConfirm='Add task'
+                    onChange={handleChangeTodo}
+                    onclickConfirm={handleClickAddTodo}
+                    onClickCancel={handleClickCancel}
+                />
+            )}
+        </div>
+    );
+}
+```
+
+```js
+// TodoForm.jsx
+import styles from './TodoForm.module.scss';
+
+export function TodoForm({ task, onChange, textConfirm, onclickConfirm, onClickCancel }) {
+    return (
+        <form className={styles.todo__form__container}>
+            <input
+                className={styles.todo__form__input}
+                placeholder='Task Name'
+                value={task}
+                onChange={onChange}
+            />
+            <div className={styles.todo__form__buttons}>
+                <button onClick={onClickCancel}>Cancel</button>
+                <button onClick={onclickConfirm}>{textConfirm}</button>
+            </div>
+        </form>
+    );
+}
+``` -->
+
+# 13 : ทำ TodoList
+
+```js
+// TodoLists.jsx
+import styles from './TodoLists.module.scss';
+import mockTodo from '../../data/todo.json';
+import { TodoItem } from './TodoItem';
+
+export function TodoLists() {
+  return (
+    <ul className={styles.todoList}>
+      {mockTodo.map((item) => (
+        <TodoItem item={item} key={item.id} />
+      ))}
+    </ul>
+  );
+}
+```
+
+```js
+// TodoItem
+import styles from './TodoItem.module.scss';
+
+import { useState } from 'react';
+import { TodoForm } from './TodoForm';
+import { HiCheck, HiPencil, HiTrash } from 'react-icons/hi';
+
+export function TodoItem({ item }) {
+  const [isEdit, setIsEdit] = useState(false);
+
+  const handleClickEdit = () => setIsEdit(true);
+  const onClickConfirm = () => {
+    setIsEdit(false);
+  };
+  const onClickCancel = () => {
+    setIsEdit(false);
+  };
+
+  return (
+    <>
+      {!isEdit ? (
+        <li className={styles.todo__item__container} key={item.id}>
+          <div className={styles.checkbox__container}>
+            <HiCheck
+              className={`${item.status ? styles.checkbox__icon__done : styles.checkbox__icon}`}
+            />
+          </div>
+          <p className={`${item.status && styles.done}`}>{item.task}</p>
+
+          <div className={styles.edit__icon} onClick={handleClickEdit}>
+            <HiPencil />
+          </div>
+
+          <div className={styles.delete__icon}>
+            <HiTrash />
+          </div>
+        </li>
+      ) : (
+        <TodoForm
+          task={item.task}
+          textConfirm='Edit task'
+          onclickConfirm={onClickConfirm}
+          onClickCancel={onClickCancel}
+        />
+      )}
+    </>
+  );
+}
+```
+
+# 14.Button
+
+```js
+import styles from './Button.module.scss';
+
+export function Button({ text, active = true }) {
+  let btnStyles = active ? styles.btn__primary : styles.btn__secondary;
+  return <button className={`${styles.btn} ${btnStyles}`}>{text}</button>;
+}
+```
+
+```css
+.btn {
+  border: none;
+  padding: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  flex: 1;
+
+  &__primary {
+    background-color: $primary;
+    color: white;
+  }
+
+  &__secondary {
+    background-color: $grey-light;
+    color: black;
   }
 }
 ```
