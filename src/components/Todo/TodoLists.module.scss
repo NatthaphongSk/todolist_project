@@ -42,6 +42,7 @@
     &__done &__icon {
       display: inline;
     }
+    // ถ้ามีคลาสที่ชื่อว่า todo__checkbox__done ให้ style display: inline; ให้กับ element ภายใน ที่มีclass todo__checkbox__icon 
   }
 
   &__task {

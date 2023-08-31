@@ -24,20 +24,19 @@ CC3-JS value ไม่สามารถทำให้ react rerender ได้
 /*
 CC4,5- Array Destructuring , React State(1 ใน function กลุ่ม React hook)
 const [state,setState]=useState(initialState:any)
+  // Rerender 1 ครั้ง codeทั้งหมดใน fc จะถูกrunใหม่ 1 ครั้ง
 */
 
-// #1 : FC=function Component (Render)
 function TodoCreate() {
   const [isOpenForm,setIsOpenForm]=useState(false)
 
-  // #2 : JS function (do logic)
   const handleClick = function (event){
     setIsOpenForm(!isOpenForm)
   }
   return (
     <>
-      {isOpenForm ? <
-        Todoform/>:
+      {isOpenForm ? 
+        <Todoform textSubmit="Add Task"/>:
         (<div className={styles.todo__create} onClick={handleClick}>
         <div className={styles.todo__create__button}>
           <HiPlus />
