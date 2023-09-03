@@ -27,7 +27,7 @@ const [state,setState]=useState(initialState:any)
   // Rerender 1 ครั้ง codeทั้งหมดใน fc จะถูกrunใหม่ 1 ครั้ง
 */
 
-function TodoCreate() {
+function TodoCreate({addTodo}) {
   const [isOpenForm,setIsOpenForm]=useState(false)
 
   const handleClick = function (event){
@@ -36,7 +36,7 @@ function TodoCreate() {
   return (
     <>
       {isOpenForm ? 
-        <Todoform textSubmit="Add Task" setIsOpenForm={setIsOpenForm}/>:
+        <Todoform textSubmit="Add Task" setIsOpenForm={setIsOpenForm} addTodo={addTodo}/>:
         (<div className={styles.todo__create} onClick={handleClick}>
         <div className={styles.todo__create__button}>
           <HiPlus />
