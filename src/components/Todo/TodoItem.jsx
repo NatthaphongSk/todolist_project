@@ -9,7 +9,7 @@ import TodoForm from './TodoForm';
 // const {task,done,date}=props;
 function TodoItem({id,task,done,date,deleteTodo,editTodo}) {
   const [isOpenForm,setIsOpenForm]=useState(false);
-  console.log(id)
+  // console.log(id)
   function handleClick(){
     setIsOpenForm(!isOpenForm)
   }
